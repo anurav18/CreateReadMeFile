@@ -15,11 +15,8 @@ function createMarkdown(response) {
 - [Contributions](#${response.heading4})
 - [ContactMe](#${response.heading5})
 
-
-
   ## Description
   ${response.description}
-
 
   ## Installation
   ${response.installation}
@@ -27,7 +24,6 @@ function createMarkdown(response) {
 * Fork this repo 
 * Clone your Forked repo on your local machine
 * Navigate to the index.html file and open it in your favorite browser
-
 
   ## Usage
   ${response.usage}
