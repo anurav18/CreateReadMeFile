@@ -1,6 +1,5 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown");
 
 //Questions Array
 
@@ -61,6 +60,46 @@ const questions = [
         type:'input',
         name:'project_page',
         message: 'Enter the link to the github profile'
+    },
+    {
+        type:'input',
+        name:'heading1',
+        message: 'Enter the first item in Table of Contents'
+    },
+    {
+        type:'input',
+        name:'heading2',
+        message: 'Enter the second item in Table of Contents'
+    },
+    {
+        type:'input',
+        name:'heading2_subheading1',
+        message: 'Enter the sub elements under heading 2'
+    },
+    {
+        type:'input',
+        name:'heading2_subheading2',
+        message: 'Enter the sub elements under heading 2'
+    },
+    {
+        type:'input',
+        name:'heading2_subheading3',
+        message: 'Enter the sub elements under heading 2'
+    },
+    {
+        type:'input',
+        name:'heading3',
+        message: 'Enter the third item in Table of Contents'
+    },
+    {
+        type:'input',
+        name:'heading4',
+        message: 'Enter the fourth item in Table of Contents'
+    },
+    {
+        type:'input',
+        name:'heading5',
+        message: 'Enter the fifth item in Table of Contents'
     }]
 
 //function to create Markdown file
@@ -73,7 +112,14 @@ function generatefile(response) {
 
   ## Table of Contents
   
-
+- [About The Project](#${response.heading1})
+- [Usage](#${response.heading2})
+  -[Installation](#${response.heading2_subheading1})
+  - [Demo](#${response.heading2_subheading2})
+  - [Tests](#${response.heading2_subheading3})
+- [License](#${response.heading3})
+- [Contributions](#${response.heading4})
+- [ContactMe](#${response.heading5})
 
 
 
@@ -91,6 +137,10 @@ function generatefile(response) {
 
   ## Usage
   ${response.usage}
+
+  ## Demo
+
+
 
   ## License
   Licensed under the ${response.license} license.
