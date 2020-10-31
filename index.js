@@ -1,5 +1,6 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
+var createmarkdown = require("./createmarkdown");
 
 //Questions Array
 
@@ -27,19 +28,19 @@ const questions = [
     {
         type:'list',
         name:'license',
-        message: 'Enter about usage',
+        message: 'Select the license',
         choices: ["MIT","BSD","GPL"]
     },
     {
         type:'input',
         name:'contributions',
-        message: 'Enter about usage'
+        message: 'Enter the contributions'
     }
     ,
     {
         type:'input',
         name:'testInstructions',
-        message: 'Enter about usage'
+        message: 'Enter test instructions'
     },
     {
         type:'input',
@@ -100,68 +101,17 @@ const questions = [
         type:'input',
         name:'heading5',
         message: 'Enter the fifth item in Table of Contents'
+    },
+    {
+        type:'input',
+        name:'demo',
+        message: 'Enter the destination of demo video'
     }]
 
-//function to create Markdown file
-
-function generatefile(response) {
-    return `
-  # ${response.title}
-
-  ![github license](https://img.shields.io/badge/license-${response.license}-blue.svg)
-
-  ## Table of Contents
-  
-- [About The Project](#${response.heading1})
-- [Usage](#${response.heading2})
-  -[Installation](#${response.heading2_subheading1})
-  - [Demo](#${response.heading2_subheading2})
-  - [Tests](#${response.heading2_subheading3})
-- [License](#${response.heading3})
-- [Contributions](#${response.heading4})
-- [ContactMe](#${response.heading5})
-
-
-
-  ## Description
-  ${response.description}
-
-
-  ## Installation
-  ${response.installation}
-* Log into Github
-* Fork this repo 
-* Clone your Forked repo on your local machine
-* Navigate to the index.html file and open it in your favorite browser
-
-
-  ## Usage
-  ${response.usage}
-
-  ## Demo
-
-
-
-  ## License
-  Licensed under the ${response.license} license.
-
-  ## Contributions
-  ${response.contributions}
-
-  ## Tests
-  ${response.testInstructions}
-
-  ## Questions
-  * Feel free to reach me with additional questions using my email : ${response.email}
-  * Please follow me on github for more intresting updates in my [repository](${response.github_repository})
-  * Explore the [project page](${response.project_page})
-  
-  `;
-  }
 
 inquirer.prompt(questions).then(response => {
     
-    fs.writeFile("README.md",generatefile(response),function(err){
+    fs.writeFile("README.md",createmarkdown(response),function(err){
         if(err){
             return console.log(err);
         }
