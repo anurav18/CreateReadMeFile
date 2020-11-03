@@ -60,7 +60,7 @@ const questions = [
     {
         type:'input',
         name:'project_page',
-        message: 'Enter the link to the github profile'
+        message: 'Enter the link to the github repository'
     },
     {
         type:'input',
@@ -102,11 +102,12 @@ const questions = [
         name:'heading5',
         message: 'Enter the fifth item in Table of Contents'
     },
-    {
-        type:'input',
-        name:'demo',
-        message: 'Enter the destination of demo video'
-    }]
+    // {
+    //     type:'input',
+    //     name:'demo',
+    //     message: 'Enter the destination of demo video'
+    // }]
+]
 
 
 inquirer.prompt(questions).then(response => {

@@ -20,10 +20,6 @@ function createMarkdown(response) {
 
   ## Installation
   ${response.installation}
-* Log into Github
-* Fork this repo 
-* Clone your Forked repo on your local machine
-* Navigate to the index.html file and open it in your favorite browser
 
   ## Usage
   ${response.usage}
@@ -43,8 +39,8 @@ function createMarkdown(response) {
 
   ## Questions
   * Feel free to reach me with additional questions using my email : ${response.email}
-  * Please follow me on github for more intresting updates in my [repository](${response.github_repository})
-  * Explore the [project page](${response.project_page})
+  * My Github [profile](${response.github_repository})
+  * Please follow me on github for more intresting updates in my [repository](${response.project_page})
   
   `;
   }
