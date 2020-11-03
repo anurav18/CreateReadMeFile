@@ -102,12 +102,12 @@ const questions = [
         name:'heading5',
         message: 'Enter the fifth item in Table of Contents'
     },
-    // {
-    //     type:'input',
-    //     name:'demo',
-    //     message: 'Enter the destination of demo video'
-    // }]
-]
+    {
+        type:'input',
+         name:'demo',
+        message: 'Enter the destination of demo video'
+    }]
+
 
 
 inquirer.prompt(questions).then(response => {

@@ -23,6 +23,10 @@
   ## Usage
   This project can be used by anyone who would like to generate a ReadMe file with least effort and also have the benefit of including all the sections of the file using command line instructions.
 
+  ## Demo
+
+  ![Demo](https://drive.google.com/file/d/1gT2Cf50_ZKK2KnGRQ3Y_QR1GK2EZXgsj/view?usp=sharing)
+
   ## License
   Licensed under the MIT license.
 

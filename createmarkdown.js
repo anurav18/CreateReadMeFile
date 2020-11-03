@@ -8,7 +8,7 @@ function createMarkdown(response) {
   
 - [About The Project](#${response.heading1})
 - [Usage](#${response.heading2})
-  -[Installation](#${response.heading2_subheading1})
+  - [Installation](#${response.heading2_subheading1})
   - [Demo](#${response.heading2_subheading2})
   - [Tests](#${response.heading2_subheading3})
 - [License](#${response.heading3})
