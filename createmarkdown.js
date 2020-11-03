@@ -26,7 +26,7 @@ function createMarkdown(response) {
 
   ## Demo
 
- ![Demo](${response.demo})
+ [Demo](${response.demo})
 
   ## License
   Licensed under the ${response.license} license.

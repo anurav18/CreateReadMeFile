@@ -7,7 +7,7 @@
   
 - [About The Project](#description)
 - [Usage](#usage)
-  -[Installation](#installation)
+  - [Installation](#installation)
   - [Demo](#demo)
   - [Tests](#tests)
 - [License](#license)
@@ -25,7 +25,7 @@
 
   ## Demo
 
-  ![Demo](https://drive.google.com/file/d/1gT2Cf50_ZKK2KnGRQ3Y_QR1GK2EZXgsj/view?usp=sharing)
+  [Demo](https://drive.google.com/file/d/1gT2Cf50_ZKK2KnGRQ3Y_QR1GK2EZXgsj/view?usp=sharing)
 
   ## License
   Licensed under the MIT license.
